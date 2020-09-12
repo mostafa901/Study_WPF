@@ -1,0 +1,26 @@
+﻿<Window
+    x:Class="Study_WPF.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Study_WPF"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="200"
+    Height="200"
+    WindowStartupLocation="CenterScreen"    
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock
+                FontSize="12"
+                FontWeight="Bold"
+                Text="{Binding Text}" />
+            <ProgressBar
+                Height="10"
+                Maximum="{Binding MaxValue}"
+                Value="{Binding ProgressValue}" />
+            <Button Command="{Binding CMD_Start}" Content="{Binding CMD_Start.Name}" Height="30" FontWeight="Bold" />
+        </StackPanel>
+    </Grid>
+</Window>
